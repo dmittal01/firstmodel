@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First model by DM</title>
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text", name="long_hair", placeholder="long_hair: "></input>
+        <input type="text", name="forehead_width_cm", placeholder="forehead_width_cm: "></input>
+        <input type="text", name="forehead_height_cm", placeholder="forehead_height_cm: "></input>
+        <input type="text", name="nose_wide", placeholder="nose_wide: "></input>
+        <input type="text", name="nose_long", placeholder="nose_long: "></input>
+        <input type="text", name="lips_thin", placeholder="lips_thin: "></input>
+        <input type="text", name="distance_nose_to_lip_long", placeholder="distance_nose_to_lip_long: "></input>
+
+        <button type="submit">Predict</button>
+    </form>
+    <h3><br>{{prediction_text}}</h3>
+</body>
+</html>
